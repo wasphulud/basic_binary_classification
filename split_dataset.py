@@ -8,7 +8,7 @@ NUM_IMAGES_PER_CLASS = 5000
 RANDOM_SEED = 1337
 
 
-parent_folder = "/Users/aimans/Projects/thera/ml_exercise_therapanacea"
+parent_folder = "./ml_exercise_therapanacea"
 
 # original image folder and data labels documents
 original_folder = os.path.join(parent_folder, "train_img")
