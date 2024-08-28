@@ -42,14 +42,14 @@ negatif_label_counter = 0
 # move the first NUM_IMAGES_PER_CLASS to the test folders then move the rest to the train folders for each class
 for image, label in tqdm.tqdm(image_label_pairs):
     if (
-        negatif_label_counter >= NUM_IMAGES_PER_CLASS - 1
-        and positif_label_counter >= NUM_IMAGES_PER_CLASS - 1
+        negatif_label_counter >= NUM_IMAGES_PER_CLASS
+        and positif_label_counter >= NUM_IMAGES_PER_CLASS
     ):
         img_destination_folder = os.path.join(parent_folder, "train", f"{label}")
-    elif negatif_label_counter < NUM_IMAGES_PER_CLASS - 1 and label == 0:
+    elif negatif_label_counter < NUM_IMAGES_PER_CLASS and label == 0:
         img_destination_folder = os.path.join(parent_folder, "test", f"{label}")
         negatif_label_counter += 1
-    elif positif_label_counter < NUM_IMAGES_PER_CLASS - 1 and label == 1:
+    elif positif_label_counter < NUM_IMAGES_PER_CLASS and label == 1:
         img_destination_folder = os.path.join(parent_folder, "test", f"{label}")
         positif_label_counter += 1
     else:
