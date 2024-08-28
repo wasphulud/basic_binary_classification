@@ -26,8 +26,11 @@ def get_device():
         return "cpu"
 
 
+RANDOM_SEED = 1337
+
+
 device = get_device()
-torch.manual_seed(1337)
+torch.manual_seed(RANDOM_SEED)
 torch.set_float32_matmul_precision("high")
 print(f"Using device: {device}")
 

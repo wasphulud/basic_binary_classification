@@ -4,7 +4,7 @@ import shutil
 
 import tqdm
 
-NUM_IMAGES_PER_CLASS = 5000
+NUM_IMAGES_PER_CLASS = 500
 RANDOM_SEED = 1337
 
 
