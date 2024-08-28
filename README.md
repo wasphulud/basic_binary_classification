@@ -22,11 +22,9 @@ This project focuses on developing a robust model for binary classification of h
 
 - **Model Evaluation**: A custom function was developed to parse the logs and identify the best model checkpoint based on accuracy and F1 score. This model was then evaluated on the validation dataset, with predictions saved in the `predictions.txt` file.
 
-## Conclusion and Future work
+## Conclusion and Future Work
 
-The project developed a binary classification model for face images using a transformer-based approach achieving a 90+% accuracy and f1-score. Despite challenges such as class imbalance, the model achieved reasonable performance, with further tuning possible for enhanced accuracy (carefully tweak the learning rate, further data augmentation, better choice of the model, ensembling methods, etc...). The results and logs could provide a solid foundation for future improvements and applications.
-
-This project developed a binary classification model for face images using a transformer-based architecture, achieving over 90% accuracy and F1-score. Despite the challenges posed by class imbalance, the model demonstrated strong performance. **However, there is still room for improvement. Future efforts could focus on fine-tuning the learning rate, exploring additional data augmentation techniques, experimenting with different model architectures, or implementing ensembling methods to further enhance accuracy and robustness.**
+The project developed a binary classification model for face images using a transformer-based approach, achieving over 90% accuracy and F1-score. Despite challenges such as class imbalance, the model demonstrated strong performance. However, there is still room for improvement. Future efforts could focus on fine-tuning the learning rate, exploring additional data augmentation techniques, experimenting with different model architectures, or implementing ensembling methods to further enhance accuracy and robustness.
 
 The results and detailed logs generated during this project provide a valuable foundation for future enhancements and potential applications.
 
@@ -40,13 +38,13 @@ The results and detailed logs generated during this project provide a valuable f
 
 - **`infer.py`**: This script loads the best-performing model and performs inference on new images, predicting class labels based on the binary classification task.
 
-- **`output_logs.txt`**: Contains logs and metrics from the training and evaluation phases, including accuracy, loss curves, and other performance indicators. These logs are critical for diagnosing model performance and informing further fine-tuning efforts.
-
 - **`best_model.py`**: This script includes the code for identifying the best-performing model based on metrics such as accuracy and F1 score. It is designed to parse the logs and extract the best model checkpoint for further inference or deployment.
+
+- **`output_logs.txt`**: Contains logs and metrics from the training and evaluation phases, including accuracy, loss curves, and other performance indicators. These logs are critical for diagnosing model performance and informing further fine-tuning efforts.
 
 - **`predictions.txt`**: This file contains the class predictions made by the best-performing model on the validation dataset.
 
-# Setup Instructions
+## Setup Instructions
 
 Follow these steps to set up the environment and install the necessary dependencies for the face classification project.
 
@@ -64,4 +62,4 @@ pip install transformers
 pip install -U scikit-learn
 ```
 
-One can then use the kernel to explore the jupyter notebook and run all the important module from there (`split_dataset.py`, `train_model.py`, `best_model.py`, `infer.py`)
+You can then use the environment's kernel to explore the Jupyter notebook and run all the important modules from there (split_dataset.py, train_model.py, best_model.py, infer.py)
